@@ -1,19 +1,47 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
   <head>
-    <title>Shape Tracker</title>
+    <title>Spotify Song Guessing Game</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fugaz+One&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <h3>Enter three lengths to determine if they can make a triangle.</h3>
-    <form id="triangle-checker-form">
-      <label for="length1">Enter a number:</label>
-      <input id="length1" type="number" />
-      <label for="length2">Enter a number:</label>
-      <input id="length2" type="number" />
-      <label for="length3">Enter a number:</label>
-      <input id="length3" type="number" />
-      <button type="submit">Submit</button>
-    </form>
-    <div id="response"></div>
+    <div id="mainContainer">
+      <h1>Song Sleuth</h1>
+
+      <button id="load-playlist-button" class="hide-button">Start Game</button>
+
+      <h2>Current Track</h2>
+
+      <!-- <div id="track-blur" class="hideBlur"></div>
+      <div id="artist-blur" class="hideBlur1"></div>
+      <div id="cover-blur" class="hideBlur2"></div> -->
+
+      <div class="hidden" id="iframePlay">
+        <iframe
+          src="https://open.spotify.com/embed/track/"
+          id="song-iframe"
+        ></iframe>
+      </div>
+
+      <h2>Make your guess:</h2>
+      <input type="text" id="guess-input" />
+      <button id="submit-guess-button">Submit Your Guess</button>
+      <button id="hint">Hint</button>
+      <!-- <button id="next-song-button">Next Song</button> -->
+
+      <h2>Score: <span id="score">0</span></h2>
+    </div>
+    <div id="sideContainer">
+      <h3 class="Top Score">Top Scores:</h3>
+    </div>
+
+    <!-- <script type="module" src="./js/apiRequest.js"></script>
+    <script type="module" src="./js/index.js"></script> -->
   </body>
 </html>

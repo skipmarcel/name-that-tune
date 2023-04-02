@@ -1,3 +1,156 @@
 body {
-  background-color: lightblue;
+  background-color: rgba(0, 128, 0, 0);
+  background-image: linear-gradient(
+    to right,
+    #1ccc5b,
+    #1c73cf,
+    #7e29f6,
+    #cf1ccf,
+    #1c73cf,
+    #1ccc5b,
+    #f7f709,
+    #1ccc5b
+  );
+  background-size: 400% 400%;
+  animation: moveGradient 12s ease infinite;
+  animation-iteration-count: infinite;
+  font-family: "Fugaz One", cursive;
+  color: azure;
+}
+
+@keyframes moveGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+#mainContainer {
+  display: flex;
+  background-color: rgba(255, 1, 1, 0.267);
+  border-radius: 10px;
+  box-shadow: 5px 8px 10px black;
+  height: 660px;
+  width: 500px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto 20px auto;
+}
+
+#sideContainer {
+  display: flex;
+  background-color: rgba(255, 1, 1, 0.267);
+  border-radius: 10px;
+  box-shadow: 5px 8px 10px black;
+  height: 935px;
+  width: 500px;
+  overflow: auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: -720px 10px 20px auto;
+}
+
+h1 {
+  font-size: 46px;
+  text-shadow: 3px 3px 2px black;
+}
+
+h2 {
+  text-shadow: 3px 3px 2px black;
+}
+
+button {
+  background-color: #e6050559;
+  border-radius: 10px;
+  border: none;
+  text-decoration: none;
+  padding: 5px 10px 5px 10px;
+  color: white;
+  font-family: "Fugaz One", cursive;
+  font-size: 20px;
+  box-shadow: 2px 3px 10px black;
+  cursor: pointer;
+}
+
+#submit-guess-button {
+  margin-bottom: 10px;
+}
+
+#track-blur {
+  position: absolute;
+  background-color: white;
+  height: 22px;
+  width: 180px;
+  margin: -35px auto 126px 42px;
+  border-radius: 6px;
+  /* filter: blur(10px); */
+}
+
+#artist-blur {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 14px;
+  width: 137px;
+  margin: -60px auto 60px auto;
+  border-radius: 6px;
+  /* filter: blur(10px); */
+}
+
+#cover-blur {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  height: 65px;
+  width: 67px;
+  margin: -73px auto 60px auto;
+  border-radius: 6px;
+  margin-left: -219px;
+  /* filter: blur(10px); */
+}
+
+.hideBlur {
+  display: none;
+}
+
+.hideBlur1 {
+  display: none;
+}
+
+.hideBlur2 {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+#iframePlay {
+}
+
+#song-iframe {
+  height: 80px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 3px 10px black;
+}
+
+#guess-input {
+  border-radius: 10px;
+  margin-bottom: 10px;
+  height: 26px;
+  width: 200px;
+}
+
+#hint {
+  margin-bottom: 10px;
+}
+
+#Top-Scores {
+  margin-top: -100px;
 }
